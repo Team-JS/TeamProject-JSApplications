@@ -9,6 +9,7 @@ import BooksView from './Views/BooksView';
 import CreateBookView from './Views/CreateBookView';
 import EditBookView from './Views/EditBookView';
 import DeleteBookView from './Views/DeleteBookView';
+import SellYourBookView from './Views/SellYourBookView';
 
 
 import KinveyRequests from './KinveyRequests';
@@ -34,6 +35,7 @@ export default class App extends Component {
                   logoutClicked={this.logout.bind(this)}
                   createBookClicked={this.showCreateBookView.bind(this)}
                   booksClicked={this.showBooksView.bind(this)}
+                  sellBookClicked={this.showSellBooksView.bind(this)}
               />
               <div id="loadingBox" className="alert alert-success">Loading ...</div>
               <div id="infoBox" className="alert alert-info">Info</div>
@@ -109,6 +111,9 @@ export default class App extends Component {
   }
   showCreateBookView(){
       this.showView(<CreateBookView onsubmit={this.createBook.bind(this)} />)
+  }
+  showSellBooksView(){
+      this.showView(<SellYourBookView onsubmit={this.sellBook.bind(this)} />)
   }
 
   booksForEdit(bookId){
@@ -192,6 +197,14 @@ export default class App extends Component {
       function createBookSuccess() {
           this.showBooksView();
           this.showInfo("Book created.")
+      }
+  }
+  sellBook(title, author, description, price){
+      KinveyRequests.listToSellBook(title, author, description, price)
+          .then(listToSellSuccess.bind(this));
+      function listToSellSuccess() {
+          this.showBooksView();
+          this.showInfo("Book listed for sale.")
       }
   }
   saveAuthInSession(userInfo){

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437a9f75-6e47-4cb5-a4b6-0cb08178f959" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/NavigationBar.js" afterPath="$PROJECT_DIR$/src/Components/NavigationBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KinveyRequests.js" afterPath="$PROJECT_DIR$/src/KinveyRequests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/BooksView.js" afterPath="$PROJECT_DIR$/src/Views/BooksView.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,40 +27,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="195" column="3" lean-forward="false" selection-start-line="195" selection-start-column="3" selection-end-line="195" selection-end-column="3" />
+            <state relative-caret-position="-754">
+              <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#1672#2027#0" expanded="false" />
-                <element signature="e#2062#2375#0" expanded="false" />
-                <element signature="e#2395#2531#0" expanded="false" />
-                <element signature="e#2553#2694#0" expanded="false" />
-                <element signature="e#2725#2851#0" expanded="false" />
-                <element signature="e#2869#2942#0" expanded="false" />
-                <element signature="e#2960#3034#0" expanded="false" />
-                <element signature="e#3055#3135#0" expanded="false" />
-                <element signature="e#3153#3626#0" expanded="false" />
-                <element signature="e#3649#3732#0" expanded="false" />
-                <element signature="e#3756#4227#0" expanded="false" />
-                <element signature="e#4274#4507#0" expanded="false" />
-                <element signature="e#4536#5044#0" expanded="false" />
-                <element signature="e#5322#5590#0" expanded="false" />
-                <element signature="e#5601#5794#0" expanded="false" />
-                <element signature="e#5825#6116#0" expanded="false" />
-                <element signature="e#6417#6707#0" expanded="false" />
+                <element signature="e#1799#2154#0" expanded="false" />
+                <element signature="e#2189#2502#0" expanded="false" />
+                <element signature="e#2522#2658#0" expanded="false" />
+                <element signature="e#2680#2821#0" expanded="false" />
+                <element signature="e#2852#2978#0" expanded="false" />
+                <element signature="e#2996#3069#0" expanded="false" />
+                <element signature="e#3087#3161#0" expanded="false" />
+                <element signature="e#3182#3262#0" expanded="false" />
+                <element signature="e#3280#3753#0" expanded="false" />
+                <element signature="e#3776#3859#0" expanded="false" />
+                <element signature="e#3988#4459#0" expanded="false" />
+                <element signature="e#4768#5276#0" expanded="false" />
+                <element signature="e#5298#5524#0" expanded="false" />
+                <element signature="e#5554#5822#0" expanded="false" />
+                <element signature="e#5833#6026#0" expanded="false" />
+                <element signature="e#6057#6348#0" expanded="false" />
+                <element signature="e#6389#6619#0" expanded="false" />
+                <element signature="e#6944#7234#0" expanded="false" />
+                <marker date="1480792737000" expanded="false" signature="4506:4739" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteBookView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Views/DeleteBookView.js">
+      <file leaf-file-name="KinveyRequests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/KinveyRequests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="2291">
+              <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -65,28 +71,18 @@
       <file leaf-file-name="RegisterView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Views/RegisterView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="580">
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-268">
-              <caret line="9" column="81" lean-forward="true" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooksView.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BooksView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Views/BooksView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="-176">
+              <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -95,8 +91,8 @@
       <file leaf-file-name="CreateBookView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Views/CreateBookView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
-              <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="-435">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -125,8 +121,18 @@
       <file leaf-file-name="NavigationBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/NavigationBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="24" column="107" lean-forward="false" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
+            <state relative-caret-position="194">
+              <caret line="24" column="85" lean-forward="false" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SellYourBookView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Views/SellYourBookView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-696">
+              <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -163,15 +169,16 @@
         <option value="$PROJECT_DIR$/src/Views/RegisterView.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Views/HomeView.js" />
-        <option value="$PROJECT_DIR$/src/KinveyRequests.js" />
         <option value="$PROJECT_DIR$/src/Views/CreateBookView.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Views/LoginView.js" />
-        <option value="$PROJECT_DIR$/src/Components/NavigationBar.js" />
         <option value="$PROJECT_DIR$/src/Views/EditBookView.js" />
         <option value="$PROJECT_DIR$/src/Views/DeleteBookView.js" />
-        <option value="$PROJECT_DIR$/src/Views/BooksView.js" />
+        <option value="$PROJECT_DIR$/src/Components/NavigationBar.js" />
+        <option value="$PROJECT_DIR$/src/Views/SellYourBookView.js" />
+        <option value="$PROJECT_DIR$/src/KinveyRequests.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/Views/BooksView.js" />
       </list>
     </option>
   </component>
@@ -371,7 +378,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480610179539</updated>
-      <workItem from="1480610181168" duration="33288000" />
+      <workItem from="1480610181168" duration="37779000" />
     </task>
     <task id="LOCAL-00001" summary="Project rework, some functionality does not work">
       <created>1480714654493</created>
@@ -384,7 +391,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33288000" />
+    <option name="totallyTimeSpent" value="37779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,13 +406,13 @@
     <frame x="839" y="0" width="838" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249694" sideWeight="0.4813084" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249694" sideWeight="0.47507787" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.50428396" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.49571604" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249694" sideWeight="0.5186916" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249694" sideWeight="0.52492213" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.49571604" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -536,14 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KinveyRequests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1247">
-          <caret line="73" column="16" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -562,26 +561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/CreateBookView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Views/LoginView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/NavigationBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="24" column="107" lean-forward="false" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
           <folding />
         </state>
       </provider>
@@ -602,14 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/RegisterView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Views/DeleteBookView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -618,38 +593,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/BooksView.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/NavigationBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="194">
+          <caret line="24" column="85" lean-forward="false" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="195" column="3" lean-forward="false" selection-start-line="195" selection-start-column="3" selection-end-line="195" selection-end-column="3" />
+        <state relative-caret-position="-754">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#1672#2027#0" expanded="false" />
-            <element signature="e#2062#2375#0" expanded="false" />
-            <element signature="e#2395#2531#0" expanded="false" />
-            <element signature="e#2553#2694#0" expanded="false" />
-            <element signature="e#2725#2851#0" expanded="false" />
-            <element signature="e#2869#2942#0" expanded="false" />
-            <element signature="e#2960#3034#0" expanded="false" />
-            <element signature="e#3055#3135#0" expanded="false" />
-            <element signature="e#3153#3626#0" expanded="false" />
-            <element signature="e#3649#3732#0" expanded="false" />
-            <element signature="e#3756#4227#0" expanded="false" />
-            <element signature="e#4274#4507#0" expanded="false" />
-            <element signature="e#4536#5044#0" expanded="false" />
-            <element signature="e#5322#5590#0" expanded="false" />
-            <element signature="e#5601#5794#0" expanded="false" />
-            <element signature="e#5825#6116#0" expanded="false" />
-            <element signature="e#6417#6707#0" expanded="false" />
+            <element signature="e#1799#2154#0" expanded="false" />
+            <element signature="e#2189#2502#0" expanded="false" />
+            <element signature="e#2522#2658#0" expanded="false" />
+            <element signature="e#2680#2821#0" expanded="false" />
+            <element signature="e#2852#2978#0" expanded="false" />
+            <element signature="e#2996#3069#0" expanded="false" />
+            <element signature="e#3087#3161#0" expanded="false" />
+            <element signature="e#3182#3262#0" expanded="false" />
+            <element signature="e#3280#3753#0" expanded="false" />
+            <element signature="e#3776#3859#0" expanded="false" />
+            <element signature="e#3988#4459#0" expanded="false" />
+            <element signature="e#4768#5276#0" expanded="false" />
+            <element signature="e#5298#5524#0" expanded="false" />
+            <element signature="e#5554#5822#0" expanded="false" />
+            <element signature="e#5833#6026#0" expanded="false" />
+            <element signature="e#6057#6348#0" expanded="false" />
+            <element signature="e#6389#6619#0" expanded="false" />
+            <element signature="e#6944#7234#0" expanded="false" />
+            <marker date="1480792737000" expanded="false" signature="4506:4739" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KinveyRequests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2291">
+          <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/SellYourBookView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-696">
+          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/RegisterView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/CreateBookView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/BooksView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

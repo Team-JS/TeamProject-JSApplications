@@ -60,6 +60,14 @@ const KinveyRequests = (function () {
             data: { title, author, description }
         });
     }
+    function listToSellBook(title, author, description, price) {
+        return $.ajax({
+            method: "POST",
+            url: baseUrl + "appdata/" + appKey + "/books",
+            headers: getKinveyUserAuthHeaders(),
+            data: {title, author, description, price}
+        });
+    }
     function editBook(bookId, title, author, description) {
         return $.ajax({
             method: "PUT",
@@ -71,7 +79,7 @@ const KinveyRequests = (function () {
     return {
         loginUser, registerUser, logoutUser,
         findAllBooks, findBookById, createBook,
-        editBook
+        editBook, listToSellBook
     }
 })();
 export default KinveyRequests;

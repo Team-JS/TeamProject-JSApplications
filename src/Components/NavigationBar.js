@@ -22,7 +22,7 @@ export default class NavigationBar extends Component{
                     <a href="#" className="btn btn-link" onClick={this.props.homeClicked}>Home</a>
                     <a href="#" className="btn btn-link" onClick={this.props.booksClicked}>List Books</a>
                     <a href="#" className="btn btn-link" onClick={this.props.createBookClicked}>Create Book</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.recomendedBooksClicked}>Recommended Books</a>
+                    <a href="#" className="btn btn-link" onClick={this.props.sellBookClicked}>Sell Your Book</a>
                     <a href="#" className="btn btn-link" onClick={this.props.forSaleClicked}>Books for Sale</a>
                     <a href="#" className="btn btn-link" onClick={this.props.aboutUsClicked}>About Us</a>
                     <a href="#" className="btn btn-link" onClick={this.props.logoutClicked}>Logout</a>
