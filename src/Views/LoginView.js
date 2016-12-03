@@ -10,21 +10,21 @@ export default class LoginView extends Component {
                 <form className="form-horizontal" onSubmit={this.submitForm.bind(this)}>
                     <h1>Login</h1>
                     <div className="form-group">
-                        <label>
-                            <div>Username:</div>
-                            <input type="text" name="username" required
+                        <label className="col-sm-2 control-label">Username</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" type="text" name="username" required
                                    ref={e => this.usernameField = e} />
-                        </label>
+                            </div>
                     </div>
                     <div className="form-group">
-                        <label>
-                            <div>Password:</div>
-                            <input type="password" name="password" required
+                        <label className="col-sm-2 control-label">Password</label>
+                        <div className="col-sm-10">
+                            <input className="form-control" type="text" name="password" required
                                    ref={e => this.passwordField = e} />
-                        </label>
+                        </div>
                     </div>
 
-                    <div>
+                    <div className="col-sm-offset-2 col-sm-10">
                         <input className="btn btn-default" type="submit" value="Login" />
                     </div>
                 </form>

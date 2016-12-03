@@ -7,6 +7,9 @@ import LoginView from './Views/LoginView';
 import RegisterView from './Views/RegisterView';
 import BooksView from './Views/BooksView';
 import CreateBookView from './Views/CreateBookView';
+import EditBookView from './Views/EditBookView';
+import DeleteBookView from './Views/DeleteBookView';
+
 
 import KinveyRequests from './KinveyRequests';
 import $ from 'jquery';
@@ -123,6 +126,39 @@ export default class App extends Component {
           );
       }
   }
+  editBook(bookId, title, author, description){
+      KinveyRequests.editBook(bookId, title, author, description)
+          .then(editBookSuccess.bind(this));
+      function editBookSuccess() {
+          this.showBooksView();
+          this.showInfo("Book created.");
+      }
+  }
+  confirmBookDelete(bookId) {
+        KinveyRequests.findBookById(bookId)
+            .then(loadBookForDeleteSuccess.bind(this));
+
+        function loadBookForDeleteSuccess(bookInfo) {
+            this.showView(
+                <DeleteBookView
+                    onsubmit={this.deleteBook.bind(this)}
+                    bookId={bookInfo._id}
+                    title={bookInfo.title}
+                    author={bookInfo.author}
+                    description={bookInfo.description}
+                />
+            );
+        }
+    }
+  deleteBook(bookId) {
+        KinveyRequests.deleteBook(bookId)
+            .then(deleteBookSuccess.bind(this));
+
+        function deleteBookSuccess() {
+            this.showBooksView();
+            this.showInfo("Book deleted.");
+        }
+    }
 
 
   login(username, password){
@@ -158,6 +194,9 @@ export default class App extends Component {
           this.showInfo("Book created.")
       }
   }
+  showCreateBookView() {
+        this.showView(<CreateBookView onsubmit={this.createBook.bind(this)} />);
+    }
 
   saveAuthInSession(userInfo){
       sessionStorage.setItem('authToken', userInfo._kmd.authtoken);
@@ -169,6 +208,5 @@ export default class App extends Component {
           userId: userInfo._id
       })
   }
-
 }
 
