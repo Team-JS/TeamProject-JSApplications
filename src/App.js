@@ -194,10 +194,6 @@ export default class App extends Component {
           this.showInfo("Book created.")
       }
   }
-  showCreateBookView() {
-        this.showView(<CreateBookView onsubmit={this.createBook.bind(this)} />);
-    }
-
   saveAuthInSession(userInfo){
       sessionStorage.setItem('authToken', userInfo._kmd.authtoken);
       sessionStorage.setItem('userId', userInfo._id);
