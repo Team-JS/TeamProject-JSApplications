@@ -11,12 +11,9 @@ import CreateBookView from './Views/CreateBookView';
 import EditBookView from './Views/EditBookView';
 import DeleteBookView from './Views/DeleteBookView';
 import SellYourBookView from './Views/SellYourBookView';
-<<<<<<< HEAD
 import BooksForSaleView from './Views/BooksForSaleView';
-
-=======
 import AboutUsView from './Views/AboutUsView';
->>>>>>> master
+
 
 import KinveyRequests from './KinveyRequests';
 import $ from 'jquery';
@@ -42,12 +39,9 @@ export default class App extends Component {
                   createBookClicked={this.showCreateBookView.bind(this)}
                   booksClicked={this.showBooksView.bind(this)}
                   sellBookClicked={this.showSellBooksView.bind(this)}
-<<<<<<< HEAD
                   BooksAbout={this.showAboutUsView.bind(this)}
                   forSaleClicked={this.showBooksForSaleView.bind(this)}
-=======
                   aboutUsClicked={this.showAboutUsView.bind(this)}
->>>>>>> master
               />
               <div id="loadingBox" className="alert alert-success">Loading ...</div>
               <div id="infoBox" className="alert alert-info">Info</div>
