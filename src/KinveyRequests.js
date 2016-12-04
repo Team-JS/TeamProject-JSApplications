@@ -76,10 +76,17 @@ const KinveyRequests = (function () {
             data: { title, author, description }
         })
     }
+    function aboutBook(bookId){
+        return $.ajax({
+            method: "GET",
+            url: baseUrl + "appdata/" + appKey + "/books/" + bookId,
+            headers: getKinveyUserAuthHeaders()
+        });
+    }
     return {
         loginUser, registerUser, logoutUser,
         findAllBooks, findBookById, createBook,
-        editBook, listToSellBook
+        editBook, listToSellBook, aboutBook
     }
 })();
 export default KinveyRequests;
