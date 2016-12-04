@@ -12,6 +12,7 @@ import CreateBookView from './Views/CreateBookView';
 import EditBookView from './Views/EditBookView';
 import DeleteBookView from './Views/DeleteBookView';
 import SellYourBookView from './Views/SellYourBookView';
+import BooksForSaleView from './Views/BooksForSaleView';
 
 
 import KinveyRequests from './KinveyRequests';
@@ -39,6 +40,7 @@ export default class App extends Component {
                   booksClicked={this.showBooksView.bind(this)}
                   sellBookClicked={this.showSellBooksView.bind(this)}
                   BooksAbout={this.showAboutUsView.bind(this)}
+                  forSaleClicked={this.showBooksForSaleView.bind(this)}
               />
               <div id="loadingBox" className="alert alert-success">Loading ...</div>
               <div id="infoBox" className="alert alert-info">Info</div>
@@ -110,6 +112,20 @@ export default class App extends Component {
                   deleteBookClicked={this.confirmBookDelete.bind(this)}
               />
           );
+      }
+  }
+  showBooksForSaleView(){
+      KinveyRequests.findAllBooks()
+          .then(loadBooksForSaleSuccess.bind(this));
+      function loadBooksForSaleSuccess(books) {
+          if(books.price != null) {
+              this.showInfo("Books For Sale loaded.");
+              this.showView(
+                  <BooksForSaleView />
+              )
+          } else {
+              this.showInfo("No books for sale.")
+          }
       }
   }
   showCreateBookView(){
