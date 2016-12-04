@@ -196,7 +196,7 @@ export default class App extends Component {
           .then(registerSuccess.bind(this));
       function registerSuccess(userInfo) {
           this.saveAuthInSession(userInfo);
-          //this.showBooksView();
+          this.showHomeView();
           this.showInfo("User registration successful.");
       }
   }
@@ -208,9 +208,6 @@ export default class App extends Component {
           this.showInfo("Book created.")
       }
   }
-  aboutBook(){
-        //TODO
-    }
   sellBook(title, author, description, price){
       KinveyRequests.listToSellBook(title, author, description, price)
           .then(listToSellSuccess.bind(this));
