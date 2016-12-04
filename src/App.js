@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import NavigationBar from './Components/NavigationBar';
-import HomeView from './Views/HomeView';
+import Footer from './Components/Footer';
+import About from './Components/AboutUs';
+import HomeView from "./Views/HomeView";
 import LoginView from './Views/LoginView';
 import RegisterView from './Views/RegisterView';
 import BooksView from './Views/BooksView';
@@ -36,6 +38,7 @@ export default class App extends Component {
                   createBookClicked={this.showCreateBookView.bind(this)}
                   booksClicked={this.showBooksView.bind(this)}
                   sellBookClicked={this.showSellBooksView.bind(this)}
+                  BooksAbout={this.showAboutUsView.bind(this)}
               />
               <div id="loadingBox" className="alert alert-success">Loading ...</div>
               <div id="infoBox" className="alert alert-info">Info</div>
@@ -112,6 +115,9 @@ export default class App extends Component {
   showCreateBookView(){
       this.showView(<CreateBookView onsubmit={this.createBook.bind(this)} />)
   }
+  showAboutUsView(){
+      this.showView(<About onsubmit={this.aboutBook.bind(this)} />)
+    }
   showSellBooksView(){
       this.showView(<SellYourBookView onsubmit={this.sellBook.bind(this)} />)
   }
@@ -199,6 +205,9 @@ export default class App extends Component {
           this.showInfo("Book created.")
       }
   }
+  aboutBook(){
+        //TODO
+    }
   sellBook(title, author, description, price){
       KinveyRequests.listToSellBook(title, author, description, price)
           .then(listToSellSuccess.bind(this));
