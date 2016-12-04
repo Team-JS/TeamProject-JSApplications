@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import NavigationBar from './Components/NavigationBar';
-import Footer from './Components/Footer';
 import About from './Components/AboutUs';
 import HomeView from "./Views/HomeView";
 import LoginView from './Views/LoginView';
@@ -12,8 +11,12 @@ import CreateBookView from './Views/CreateBookView';
 import EditBookView from './Views/EditBookView';
 import DeleteBookView from './Views/DeleteBookView';
 import SellYourBookView from './Views/SellYourBookView';
+<<<<<<< HEAD
 import BooksForSaleView from './Views/BooksForSaleView';
 
+=======
+import AboutUsView from './Views/AboutUsView';
+>>>>>>> master
 
 import KinveyRequests from './KinveyRequests';
 import $ from 'jquery';
@@ -39,8 +42,12 @@ export default class App extends Component {
                   createBookClicked={this.showCreateBookView.bind(this)}
                   booksClicked={this.showBooksView.bind(this)}
                   sellBookClicked={this.showSellBooksView.bind(this)}
+<<<<<<< HEAD
                   BooksAbout={this.showAboutUsView.bind(this)}
                   forSaleClicked={this.showBooksForSaleView.bind(this)}
+=======
+                  aboutUsClicked={this.showAboutUsView.bind(this)}
+>>>>>>> master
               />
               <div id="loadingBox" className="alert alert-success">Loading ...</div>
               <div id="infoBox" className="alert alert-info">Info</div>
@@ -137,8 +144,12 @@ export default class App extends Component {
   showSellBooksView(){
       this.showView(<SellYourBookView onsubmit={this.sellBook.bind(this)} />)
   }
+    showAboutUsView(){
+        this.showView(<AboutUsView />);
+    }
 
-  booksForEdit(bookId){
+
+    booksForEdit(bookId){
       KinveyRequests.findBookById(bookId)
           .then(loadBookForEditSuccess.bind(this));
       function loadBookForEditSuccess(bookInfo) {
@@ -209,7 +220,7 @@ export default class App extends Component {
           .then(registerSuccess.bind(this));
       function registerSuccess(userInfo) {
           this.saveAuthInSession(userInfo);
-          //this.showBooksView();
+          this.showHomeView();
           this.showInfo("User registration successful.");
       }
   }
@@ -221,9 +232,6 @@ export default class App extends Component {
           this.showInfo("Book created.")
       }
   }
-  aboutBook(){
-        //TODO
-    }
   sellBook(title, author, description, price){
       KinveyRequests.listToSellBook(title, author, description, price)
           .then(listToSellSuccess.bind(this));

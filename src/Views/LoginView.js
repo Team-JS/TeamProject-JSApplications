@@ -19,7 +19,7 @@ export default class LoginView extends Component {
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Password</label>
                         <div className="col-sm-10">
-                            <input className="form-control" type="text" name="password" required
+                            <input className="form-control" type="password" name="password" required
                                    ref={e => this.passwordField = e} />
                         </div>
                     </div>

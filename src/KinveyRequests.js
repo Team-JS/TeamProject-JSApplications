@@ -76,6 +76,13 @@ const KinveyRequests = (function () {
             data: { title, author, description }
         })
     }
+    function deleteBook(bookId) {
+        return $.ajax({
+            method: "DELETE",
+            url: baseUrl + "appdata/" + appKey + "/books/" + bookId,
+            headers: getKinveyUserAuthHeaders(),
+        })
+    }
     function aboutBook(bookId){
         return $.ajax({
             method: "GET",
@@ -84,7 +91,7 @@ const KinveyRequests = (function () {
         });
     }
     return {
-        loginUser, registerUser, logoutUser,
+        deleteBook, loginUser, registerUser, logoutUser,
         findAllBooks, findBookById, createBook,
         editBook, listToSellBook, aboutBook
     }
