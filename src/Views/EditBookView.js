@@ -6,30 +6,33 @@ import React, { Component } from 'react';
 export default class EditBookView extends Component {
     render() {
         return (
-            <form className="edit-book-form" onSubmit={this.submitForm.bind(this)}>
-                <h1>Edit Book</h1>
-                <label>
-                    <div>Title:</div>
-                    <input type="text" name="title" required
-                           defaultValue={this.props.title}
-                           ref={e => this.titleField = e} />
-                </label>
-                <label>
-                    <div>Author:</div>
-                    <input type="text" name="author" required
-                           defaultValue={this.props.author}
-                           ref={e => this.authorField = e} />
-                </label>
-                <label>
-                    <div>Description:</div>
-                    <textarea name="description" rows="10"
-                              defaultValue={this.props.description}
-                              ref={e => this.descriptionField = e} />
-                </label>
-                <div>
-                    <input type="submit" value="Edit" />
-                </div>
-            </form>
+            <div className="jumbotron">
+                <form className="form-horizontal" onSubmit={this.submitForm.bind(this)}>
+                    <h1>Edit Book</h1>
+                    <div className="form-group">
+                        <label for="inputTitle">Title</label>
+                            <input type="text" name="title" className="form-control" id="inputTitle" required
+                                   defaultValue={this.props.title}
+                                   ref={e => this.titleField = e} />
+                    </div>
+                    <div className="form-group">
+                        <label for="inputAuthor">Author</label>
+                            <input type="text" name="author" className="form-control" id="inputAuthor" required
+                                   defaultValue={this.props.author}
+                                   ref={e => this.authorField = e} />
+                    </div>
+                    <div className="form-group">
+                        <label for="inputDescr">Description</label>
+                            <textarea name="description" rows="10" className="form-control" id="inputDescr"
+                                      defaultValue={this.props.description}
+                                      ref={e => this.descriptionField = e} />
+                    </div>
+                    <div className="form-group">
+                        <input className="btn btn-warning" type="submit" value="Edit" />
+                    </div>
+                </form>
+            </div>
+
         );
     }
 

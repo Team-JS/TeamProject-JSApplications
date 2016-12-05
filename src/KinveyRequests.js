@@ -52,28 +52,28 @@ const KinveyRequests = (function () {
             headers: getKinveyUserAuthHeaders()
         });
     }
-    function createBook(title, author, description) {
+    function createBook(title, author, description, url) {
         return $.ajax({
             method: "POST",
             url: baseUrl + "appdata/" + appKey + "/books",
             headers: getKinveyUserAuthHeaders(),
-            data: { title, author, description }
+            data: { title, author, description, url}
         });
     }
-    function listToSellBook(title, author, description, price, date) {
+    function listToSellBook(title, author, description, url, price, date) {
         return $.ajax({
             method: "POST",
             url: baseUrl + "appdata/" + appKey + "/books",
             headers: getKinveyUserAuthHeaders(),
-            data: {title, author, description, price, date}
+            data: {title, author, description, url, price, date}
         });
     }
-    function editBook(bookId, title, author, description) {
+    function editBook(bookId, title, author, description, price) {
         return $.ajax({
             method: "PUT",
             url: baseUrl + "appdata/" + appKey + "/books/" + bookId,
             headers: getKinveyUserAuthHeaders(),
-            data: { title, author, description }
+            data: { title, author, description, price }
         })
     }
     function deleteBook(bookId) {

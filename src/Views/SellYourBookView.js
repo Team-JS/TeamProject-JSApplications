@@ -11,35 +11,42 @@ export default class SellYourBookView extends Component {
                     <h1>Sell You Book</h1>
                     <div className="form-group">
                         <label>
-                            <div>Title:</div>
-                            <input type="text" name="title" required ref={e => this.titleField = e}/>
+                            <div>Title</div>
+                            <input className="form-control" type="text" name="title" required ref={e => this.titleField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
-                            <div>Author:</div>
-                            <input type="text" name="author" required
+                            <div>Author</div>
+                            <input className="form-control" type="text" name="author" required
                                    ref={e => this.authorField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
-                            <div>Description:</div>
-                            <textarea name="description" rows="10"
+                            <div>Description</div>
+                            <textarea className="form-control" name="description" rows="10"
                                       ref={e => this.descriptionField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
-                            <div>Price:</div>
-                            <input input type="number" step="0.01" pattern="\d+(\.\d{2})?" name="price" required
-                                      ref={e => this.priceField = e}/>
+                            <div>Picture Url</div>
+                            <input className="form-control" type="text" name="url" required
+                                   ref={e => this.pictureUrlField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
-                            <div>Date Published:</div>
-                            <input input type="date" name="date" required
+                            <div>Price</div>
+                                <input className="form-control" input type="number" step="0.01" pattern="\d+(\.\d{2})?" name="price" required
+                                       ref={e => this.priceField = e}/>
+                        </label>
+                    </div>
+                    <div className="form-group">
+                        <label>
+                            <div>Date Published</div>
+                            <input className="form-control" input type="date" name="date" required
                                    ref={e => this.dateField = e}/>
                         </label>
                     </div>
@@ -56,6 +63,7 @@ export default class SellYourBookView extends Component {
             this.titleField.value,
             this.authorField.value,
             this.descriptionField.value,
+            this.pictureUrlField.value,
             this.priceField.value,
             this.dateField.value,
         )

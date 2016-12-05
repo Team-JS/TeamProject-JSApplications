@@ -12,6 +12,7 @@ import DeleteBookView from './Views/DeleteBookView';
 import SellYourBookView from './Views/SellYourBookView';
 import BooksForSaleView from './Views/BooksForSaleView';
 import AboutUsView from './Views/AboutUsView';
+import DetailsBookView from './Views/DetailsBookView';
 
 
 import KinveyRequests from './KinveyRequests';
@@ -38,7 +39,6 @@ export default class App extends Component {
                   createBookClicked={this.showCreateBookView.bind(this)}
                   booksClicked={this.showBooksView.bind(this)}
                   sellBookClicked={this.showSellBooksView.bind(this)}
-                  BooksAbout={this.showAboutUsView.bind(this)}
                   forSaleClicked={this.showBooksForSaleView.bind(this)}
                   aboutUsClicked={this.showAboutUsView.bind(this)}
               />
@@ -75,13 +75,13 @@ export default class App extends Component {
         $('#infoBox').text(message).show();
         setTimeout(function () {
             $('#infoBox').fadeOut();
-        },3000);
+        },2000);
   }
   showError(errorMsg){
       $('#errorBox').text("Error: " + errorMsg).show();
       setTimeout(function () {
           $('#errorBox').fadeOut()
-      },3000)
+      },2000)
   }
   showView(reactViewComponent){
         ReactDOM.render(reactViewComponent,
@@ -110,18 +110,24 @@ export default class App extends Component {
                   userId={this.state.userId}
                   editBookClicked={this.booksForEdit.bind(this)}
                   deleteBookClicked={this.confirmBookDelete.bind(this)}
+                  detailsBookClicked={this.detailsBook.bind(this)}
               />
           );
       }
   }
   showBooksForSaleView(){
+      //TODO:...
       KinveyRequests.findAllBooks()
           .then(loadBooksForSaleSuccess.bind(this));
       function loadBooksForSaleSuccess(books) {
-          if(books.price === null) {
+          if(this.books.price === null) {
               this.showInfo("Books For Sale loaded.");
               this.showView(
-                  <BooksForSaleView />
+                  <BooksForSaleView
+                      books={books}
+                      userId={this.state.userId}
+
+                  />
               )
           } else {
               this.showInfo("No books for sale.")
@@ -138,8 +144,25 @@ export default class App extends Component {
         this.showView(<AboutUsView />);
     }
 
-
-    booksForEdit(bookId){
+  detailsBook(bookId){
+      //TODO: call and request book with this id and display...
+      //on success DetailsBookView
+      KinveyRequests.findBookById(bookId)
+          .then(loadDetailsBookSuccess.bind(this));
+      function loadDetailsBookSuccess(bookInfo) {
+          this.showView(
+              <DetailsBookView
+                  bookId={bookInfo._id}
+                  title={bookInfo.title}
+                  author={bookInfo.author}
+                  description={bookInfo.description}
+                  url={bookInfo.url}
+                  price={bookInfo.price}
+              />
+          )
+      }
+  }
+  booksForEdit(bookId){
       KinveyRequests.findBookById(bookId)
           .then(loadBookForEditSuccess.bind(this));
       function loadBookForEditSuccess(bookInfo) {
@@ -214,16 +237,16 @@ export default class App extends Component {
           this.showInfo("User registration successful.");
       }
   }
-  createBook(title, author, description){
-      KinveyRequests.createBook(title, author, description)
+  createBook(title, author, description, url){
+      KinveyRequests.createBook(title, author, description, url)
           .then(createBookSuccess.bind(this));
       function createBookSuccess() {
           this.showBooksView();
           this.showInfo("Book created.")
       }
   }
-  sellBook(title, author, description, price, date){
-      KinveyRequests.listToSellBook(title, author, description, price, date)
+  sellBook(title, author, description, price, date, url){
+      KinveyRequests.listToSellBook(title, author, description, price, date, url)
           .then(listToSellSuccess.bind(this));
       function listToSellSuccess() {
           this.showBooksView();

@@ -11,22 +11,29 @@ export default class CreateBookView extends Component {
                     <h1>Create Book</h1>
                     <div className="form-group">
                         <label>
-                            <div>Title:</div>
-                            <input type="text" name="title" required ref={e => this.titleField = e}/>
+                            <div>Title</div>
+                            <input className="form-control" type="text" name="title" required ref={e => this.titleField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
-                            <div>Author:</div>
-                            <input type="text" name="author" required
+                            <div>Author</div>
+                            <input className="form-control" type="text" name="author" required
                                    ref={e => this.authorField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
-                            <div>Description:</div>
-                            <textarea name="description" rows="10"
+                            <div>Description</div>
+                            <textarea className="form-control" name="description" rows="10"
                                       ref={e => this.descriptionField = e}/>
+                        </label>
+                    </div>
+                    <div className="form-group">
+                        <label>
+                            <div>Picture Url</div>
+                            <input className="form-control" type="text" name="url" required
+                                   ref={e => this.pictureUrlField = e}/>
                         </label>
                     </div>
                     <div>
@@ -42,6 +49,7 @@ export default class CreateBookView extends Component {
             this.titleField.value,
             this.authorField.value,
             this.descriptionField.value,
+            this.pictureUrlField.value
         )
     }
 }

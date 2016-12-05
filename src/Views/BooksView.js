@@ -41,7 +41,10 @@ export default class BooksView extends Component {
         if(book._acl.creator === userId){
             return(
                 <td>
-                    <input className="btn btn-default" type="button" value="Edit"
+                    <input className="btn btn-info" type="button" value="Details"
+                           onClick={this.props.detailsBookClicked.bind(this, book._id)} />
+                    &nbsp;
+                    <input className="btn btn-warning" type="button" value="Edit"
                            onClick={this.props.editBookClicked.bind(this, book._id)} />
                     &nbsp;
                     <input className="btn btn-danger" type="button" value="Delete"
@@ -49,7 +52,12 @@ export default class BooksView extends Component {
                 </td>
             );
         } else {
-            return <td></td>;
+            return (
+                <td>
+                    <input className="btn btn-info" type="button" value="Details"
+                           onClick={this.props.detailsBookClicked.bind(this, book._id)} />
+                </td>
+            );
         }
     }
 }
