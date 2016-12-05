@@ -10,22 +10,35 @@ export default class EditBookView extends Component {
                 <form className="form-horizontal" onSubmit={this.submitForm.bind(this)}>
                     <h1>Edit Book</h1>
                     <div className="form-group">
-                        <label for="inputTitle">Title</label>
-                            <input type="text" name="title" className="form-control" id="inputTitle" required
+                        <label>
+                            <div>Title</div>
+                            <input className="form-control" type="text" name="title"  id="inputTitle" required
                                    defaultValue={this.props.title}
                                    ref={e => this.titleField = e} />
+                        </label>
                     </div>
                     <div className="form-group">
-                        <label for="inputAuthor">Author</label>
-                            <input type="text" name="author" className="form-control" id="inputAuthor" required
+                        <label>
+                            <div>Author</div>
+                            <input className="form-control" type="text" name="author" id="inputAuthor" required
                                    defaultValue={this.props.author}
                                    ref={e => this.authorField = e} />
+                        </label>
                     </div>
                     <div className="form-group">
-                        <label for="inputDescr">Description</label>
-                            <textarea name="description" rows="10" className="form-control" id="inputDescr"
+                        <label>
+                            <div>Description</div>
+                            <textarea className="form-control" name="description" rows="10" id="inputDescr"
                                       defaultValue={this.props.description}
                                       ref={e => this.descriptionField = e} />
+                        </label>
+                    </div>
+                    <div className="form-group">
+                        <label>
+                            <div>Picture Url</div>
+                            <input className="form-control" type="text" name="url" required
+                                   ref={e => this.pictureUrlField = e}/>
+                        </label>
                     </div>
                     <div className="form-group">
                         <input className="btn btn-warning" type="submit" value="Edit" />
@@ -43,6 +56,7 @@ export default class EditBookView extends Component {
             this.titleField.value,
             this.authorField.value,
             this.descriptionField.value,
+            this.pictureUrlField.value,
         );
     }
 }

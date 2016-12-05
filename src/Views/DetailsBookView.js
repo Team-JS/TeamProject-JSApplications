@@ -11,7 +11,7 @@ export default class DetailsBookView extends Component{
                 <br/>
                 <h2>By: {this.props.author}</h2>
                 <br/>
-                <img className="img-responsive img-rounded" src={this.props.url} />
+                <img className="img-responsive img-rounded" src={this.props.url} role="presentation"/>
                 <br/>
                 <p>{this.props.description}</p>
                 <p>{this.props.price}</p>

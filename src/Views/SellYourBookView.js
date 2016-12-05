@@ -39,14 +39,14 @@ export default class SellYourBookView extends Component {
                     <div className="form-group">
                         <label>
                             <div>Price</div>
-                                <input className="form-control" input type="number" step="0.01" pattern="\d+(\.\d{2})?" name="price" required
+                                <input className="form-control" type="number" step="0.01" pattern="\d+(\.\d{2})?" name="price" required
                                        ref={e => this.priceField = e}/>
                         </label>
                     </div>
                     <div className="form-group">
                         <label>
                             <div>Date Published</div>
-                            <input className="form-control" input type="date" name="date" required
+                            <input className="form-control" type="date" name="date" required
                                    ref={e => this.dateField = e}/>
                         </label>
                     </div>

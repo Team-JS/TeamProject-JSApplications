@@ -145,8 +145,6 @@ export default class App extends Component {
     }
 
   detailsBook(bookId){
-      //TODO: call and request book with this id and display...
-      //on success DetailsBookView
       KinveyRequests.findBookById(bookId)
           .then(loadDetailsBookSuccess.bind(this));
       function loadDetailsBookSuccess(bookInfo) {
@@ -177,8 +175,8 @@ export default class App extends Component {
           );
       }
   }
-  editBook(bookId, title, author, description){
-      KinveyRequests.editBook(bookId, title, author, description)
+  editBook(bookId, title, author, description, url){
+      KinveyRequests.editBook(bookId, title, author, description, url)
           .then(editBookSuccess.bind(this));
       function editBookSuccess() {
           this.showBooksView();

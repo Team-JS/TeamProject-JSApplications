@@ -19,8 +19,9 @@ export default class BooksView extends Component {
         return (
             <div className="panel panel-default">
                 <div className="panel-heading">Books</div>
-                <table className="table">
-                    <thead>
+                <div className="table-responsive">
+                    <table className="table">
+                        <thead>
                         <tr>
                             <th>Title</th>
                             <th>Author</th>
@@ -29,11 +30,12 @@ export default class BooksView extends Component {
                             <th>Price</th>
                             <th>Actions</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         {bookRows}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }
