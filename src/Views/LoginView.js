@@ -12,20 +12,20 @@ export default class LoginView extends Component {
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Username</label>
                             <div className="col-sm-10">
-                                <input className="form-control" type="text" name="username" required
+                                <input className="form-control" type="text" name="username" placeholder="Username" required
                                    ref={e => this.usernameField = e} />
                             </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Password</label>
                         <div className="col-sm-10">
-                            <input className="form-control" type="password" name="password" required
+                            <input className="form-control" type="password" name="password" placeholder="Password" required
                                    ref={e => this.passwordField = e} />
                         </div>
                     </div>
 
                     <div className="col-sm-offset-2 col-sm-10">
-                        <input className="btn btn-default" type="submit" value="Login" />
+                        <input className="btn btn-primary" type="submit" value="Login" />
                     </div>
                 </form>
             </div>

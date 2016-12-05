@@ -10,6 +10,7 @@ export default class BooksView extends Component {
                 <td>{book.title}</td>
                 <td>{book.author}</td>
                 <td>{book.description}</td>
+                <td>{book.date}</td>
                 <td>{book.price}</td>
                 {this.getActions(book, this.props.userId)}
             </tr>
@@ -24,6 +25,7 @@ export default class BooksView extends Component {
                             <th>Title</th>
                             <th>Author</th>
                             <th>Description</th>
+                            <th>Date</th>
                             <th>Price</th>
                             <th>Actions</th>
                         </tr>
@@ -39,10 +41,10 @@ export default class BooksView extends Component {
         if(book._acl.creator === userId){
             return(
                 <td>
-                    <input type="button" value="Edit"
+                    <input className="btn btn-default" type="button" value="Edit"
                            onClick={this.props.editBookClicked.bind(this, book._id)} />
                     &nbsp;
-                    <input type="button" value="Delete"
+                    <input className="btn btn-danger" type="button" value="Delete"
                            onClick={this.props.deleteBookClicked.bind(this, book._id)} />
                 </td>
             );

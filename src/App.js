@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import NavigationBar from './Components/NavigationBar';
-import About from './Components/AboutUs';
 import HomeView from "./Views/HomeView";
 import LoginView from './Views/LoginView';
 import RegisterView from './Views/RegisterView';
@@ -119,7 +118,7 @@ export default class App extends Component {
       KinveyRequests.findAllBooks()
           .then(loadBooksForSaleSuccess.bind(this));
       function loadBooksForSaleSuccess(books) {
-          if(books.price != null) {
+          if(books.price === null) {
               this.showInfo("Books For Sale loaded.");
               this.showView(
                   <BooksForSaleView />
@@ -132,13 +131,10 @@ export default class App extends Component {
   showCreateBookView(){
       this.showView(<CreateBookView onsubmit={this.createBook.bind(this)} />)
   }
-  showAboutUsView(){
-      this.showView(<About onsubmit={this.aboutBook.bind(this)} />)
-    }
   showSellBooksView(){
       this.showView(<SellYourBookView onsubmit={this.sellBook.bind(this)} />)
   }
-    showAboutUsView(){
+  showAboutUsView(){
         this.showView(<AboutUsView />);
     }
 
@@ -226,8 +222,8 @@ export default class App extends Component {
           this.showInfo("Book created.")
       }
   }
-  sellBook(title, author, description, price){
-      KinveyRequests.listToSellBook(title, author, description, price)
+  sellBook(title, author, description, price, date){
+      KinveyRequests.listToSellBook(title, author, description, price, date)
           .then(listToSellSuccess.bind(this));
       function listToSellSuccess() {
           this.showBooksView();

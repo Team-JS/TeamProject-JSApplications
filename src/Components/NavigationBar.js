@@ -9,23 +9,25 @@ export default class NavigationBar extends Component{
         if(username == null){
             return(
                 <nav className="navbar">
-                    <div className="container">
-                        <a href="#" className="btn btn-link" onClick={this.props.homeClicked}>Home</a>
-                        <a href="#" className="btn btn-link" onClick={this.props.loginClicked}>Login</a>
-                        <a href="#" className="btn btn-link" onClick={this.props.registerClicked}>Register</a>
-                    </div>
+                    <ul className="nav nav-pills">
+                        <li className="active"><a href="#" onClick={this.props.homeClicked}><span className="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#"  onClick={this.props.loginClicked}>Login</a></li>
+                        <li><a href="#"  onClick={this.props.registerClicked}>Register</a></li>
+                    </ul>
                 </nav>
             );
         } else {
             return(
                 <nav className="navbar">
-                    <a href="#" className="btn btn-link" onClick={this.props.homeClicked}>Home</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.booksClicked}>List Books</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.createBookClicked}>Create Book</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.sellBookClicked}>Sell Your Book</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.forSaleClicked}>Books for Sale</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.aboutUsClicked}>About Us</a>
-                    <a href="#" className="btn btn-link" onClick={this.props.logoutClicked}>Logout</a>
+                    <ul className="nav nav-pills">
+                        <li className="active"><a href="#" onClick={this.props.homeClicked}><span className="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#"onClick={this.props.booksClicked}>List Books</a></li>
+                        <li><a href="#" onClick={this.props.createBookClicked}>Create Book</a></li>
+                        <li><a href="#" onClick={this.props.sellBookClicked}>Sell Your Book</a></li>
+                        <li><a href="#" onClick={this.props.forSaleClicked}>Books for Sale</a></li>
+                        <li><a href="#" onClick={this.props.aboutUsClicked}>About Us</a></li>
+                        <li><a href="#" onClick={this.props.logoutClicked}>Logout</a></li>
+                    </ul>
                 </nav>
             );
         }

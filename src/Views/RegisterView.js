@@ -7,20 +7,24 @@ export default class RegisterView extends Component {
     render() {
         return (
             <div className="jumbotron">
-                <form className="register-form" onSubmit={this.submitForm.bind(this)}>
+                <form className="form-horizontal" onSubmit={this.submitForm.bind(this)}>
                     <h1>Register</h1>
-                    <label>
-                        <div>Username:</div>
-                        <input type="text" name="username" required
-                               ref={e => this.usernameField = e} />
-                    </label>
-                    <label>
-                        <div>Password:</div>
-                        <input type="password" name="password" required
-                               ref={e => this.passwordField = e} />
-                    </label>
-                    <div>
-                        <input type="submit" value="Register" />
+                    <div className="form-group">
+                        <label className="col-sm-2 control-label">Username:</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" type="text" name="username" placeholder="Username" required
+                                   ref={e => this.usernameField = e} />
+                            </div>
+                    </div>
+                    <div className="form-group">
+                        <label className="col-sm-2 control-label">Password:</label>
+                        <div className="col-sm-10">
+                            <input className="form-control" type="password" name="password" placeholder="Password" required
+                                   ref={e => this.passwordField = e} />
+                        </div>
+                    </div>
+                    <div className="col-sm-offset-2 col-sm-10">
+                        <input className="btn btn-primary" type="submit" value="Register" />
                     </div>
                 </form>
             </div>

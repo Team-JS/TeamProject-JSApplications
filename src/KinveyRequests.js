@@ -60,12 +60,12 @@ const KinveyRequests = (function () {
             data: { title, author, description }
         });
     }
-    function listToSellBook(title, author, description, price) {
+    function listToSellBook(title, author, description, price, date) {
         return $.ajax({
             method: "POST",
             url: baseUrl + "appdata/" + appKey + "/books",
             headers: getKinveyUserAuthHeaders(),
-            data: {title, author, description, price}
+            data: {title, author, description, price, date}
         });
     }
     function editBook(bookId, title, author, description) {
