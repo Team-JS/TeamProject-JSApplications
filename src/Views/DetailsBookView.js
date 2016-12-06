@@ -14,7 +14,8 @@ export default class DetailsBookView extends Component{
                 <img className="img-responsive img-rounded" src={this.props.url} role="presentation"/>
                 <br/>
                 <p>{this.props.description}</p>
-                <p>{this.props.price}</p>
+                <br/>
+                <h4>Price ${this.props.price}</h4>
 
             </div>
         )

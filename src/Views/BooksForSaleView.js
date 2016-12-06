@@ -15,20 +15,22 @@ export default class BooksForSaleView extends Component {
         return (
             <div className="panel panel-default">
                 <div className="panel-heading">Books</div>
-                <table className="table">
-                    <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {bookRows}
-                    </tbody>
-                </table>
+                <div className="table-responsive">
+                    <table className="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th className="col-lg-3 col-sm-2 col-xs-1">Title</th>
+                            <th>Author</th>
+                            <th className="col-lg-6 col-sm-2 col-xs-1">Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {bookRows}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }
@@ -36,15 +38,23 @@ export default class BooksForSaleView extends Component {
         if(book._acl.creator === userId){
             return(
                 <td>
-                    <input type="button" value="Edit"
+                    <input className="btn btn-info" type="button" value="Details"
+                           onClick={this.props.detailsBookClicked.bind(this, book._id)} />
+                    &nbsp;
+                    <input className="btn btn-warning" type="button" value="Edit"
                            onClick={this.props.editBookClicked.bind(this, book._id)} />
                     &nbsp;
-                    <input type="button" value="Delete"
+                    <input className="btn btn-danger" type="button" value="Delete"
                            onClick={this.props.deleteBookClicked.bind(this, book._id)} />
                 </td>
             );
         } else {
-            return <td></td>;
+            return (
+                <td>
+                    <input className="btn btn-info" type="button" value="Details"
+                           onClick={this.props.detailsBookClicked.bind(this, book._id)} />
+                </td>
+            );
         }
     }
 }
