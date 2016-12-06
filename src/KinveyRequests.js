@@ -52,12 +52,12 @@ const KinveyRequests = (function () {
             headers: getKinveyUserAuthHeaders()
         });
     }
-    function createBook(title, author, description, url) {
+    function createBook(title, author, description, url, date) {
         return $.ajax({
             method: "POST",
             url: baseUrl + "appdata/" + appKey + "/books",
             headers: getKinveyUserAuthHeaders(),
-            data: { title, author, description, url}
+            data: { title, author, description, url, date}
         });
     }
     function listToSellBook(title, author, description, url, price, date) {

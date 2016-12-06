@@ -21,7 +21,7 @@ export default class BooksForSaleView extends Component {
                         <tr>
                             <th className="col-lg-3 col-sm-2 col-xs-1">Title</th>
                             <th>Author</th>
-                            <th className="col-lg-6 col-sm-2 col-xs-1">Description</th>
+                            <th className="col-lg-3 col-sm-2 col-xs-1">Description</th>
                             <th>Price</th>
                             <th>Actions</th>
                         </tr>

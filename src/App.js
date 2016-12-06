@@ -75,18 +75,20 @@ export default class App extends Component {
         $('#infoBox').text(message).show();
         setTimeout(function () {
             $('#infoBox').fadeOut();
-        },2000);
+        },3000);
   }
   showError(errorMsg){
       $('#errorBox').text("Error: " + errorMsg).show();
       setTimeout(function () {
           $('#errorBox').fadeOut()
-      },2000)
+      },3000)
   }
   showView(reactViewComponent){
         ReactDOM.render(reactViewComponent,
             document.getElementById('main'));
         $('#errorBox').hide();
+        $('#infoBox').hide();
+        $('#loadingBox').hide();
   }
 
   showHomeView(){
@@ -116,12 +118,12 @@ export default class App extends Component {
       }
   }
   showBooksForSaleView(){
-      //TODO:...
       KinveyRequests.findAllBooks()
           .then(loadBooksForSaleSuccess.bind(this));
       function loadBooksForSaleSuccess(books) {
+
           books = books.filter(b => b.price)
-          //for(let book of books)
+
           if(books) {
               this.showInfo("Books For Sale loaded.");
               this.showView(
@@ -240,8 +242,8 @@ export default class App extends Component {
           this.showInfo("User registration successful.");
       }
   }
-  createBook(title, author, description, url){
-      KinveyRequests.createBook(title, author, description, url)
+  createBook(title, author, description, url, date){
+      KinveyRequests.createBook(title, author, description, url, date)
           .then(createBookSuccess.bind(this));
       function createBookSuccess() {
           this.showBooksView();

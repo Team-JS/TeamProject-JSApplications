@@ -5,12 +5,13 @@ export default class AboutUsView extends Component {
         return(
             <div className="about-us-view">
                 <h1>About us</h1>
+                <br/>
                 <h2>Ivan</h2>
-                <p>For Ivan...</p>
-
+                <p>GitHub: https://github.com/optional303</p>
+                <br/>
                 <h2>Nikolay Stanchev</h2>
                 <p>Facebook: https://www.facebook.com/nikolai.stanchev.31</p>
-
+                <br/>
                 <h2>Milena</h2>
                 <p>For Milena...</p>
             </div>

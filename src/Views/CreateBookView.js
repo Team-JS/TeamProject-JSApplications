@@ -36,6 +36,13 @@ export default class CreateBookView extends Component {
                                    ref={e => this.pictureUrlField = e}/>
                         </label>
                     </div>
+                    <div className="form-group">
+                        <label>
+                            <div>Date Published</div>
+                            <input className="form-control" type="date" name="date" required
+                                   ref={e => this.dateField = e}/>
+                        </label>
+                    </div>
                     <div>
                         <input className="btn btn-info" type="submit" value="Create" />
                     </div>
@@ -49,7 +56,8 @@ export default class CreateBookView extends Component {
             this.titleField.value,
             this.authorField.value,
             this.descriptionField.value,
-            this.pictureUrlField.value
+            this.pictureUrlField.value,
+            this.dateField.value
         )
     }
 }

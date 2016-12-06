@@ -7,18 +7,19 @@ export default class HomeView extends Component{
     render(){
         return(
             <div className="jumbotron">
-                <h1>Welcome Home</h1>
+                <h1>Welcome to the Home of the Book</h1>
                 { this.props.username ?
-                    <p>Welcome, {this.props.username}.</p> :
+                    <h2>Welcome, {this.props.username}.</h2> :
                     <p>Welcome to this book site.</p>
 
                 }
                 <p>This is the Prodacvachnica and book-listings home.
-                For any questions and concerns please login or register.</p>
-                <div className="img-responsive">
-                    <img href="../images/bookPic.jpg" alt=""/>
+                Here you will find a collection of all your favorite programming books,
+                to which you can add, edit, sell and delete. Make this your first stop of reference
+                to your book collection.</p>
+                <div>
+                    <img src="src/images/bookPic.jpg" alt="" className="img-responsive"/>
                 </div>
-
             </div>
         );
     }
