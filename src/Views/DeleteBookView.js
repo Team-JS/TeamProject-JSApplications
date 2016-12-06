@@ -23,7 +23,7 @@ export default class DeleteBookView extends Component {
                     <div className="form-group">
                         <label>
                             <div>Description</div>
-                            <textarea className="form-control" name="description" rows="10" disabled
+                            <textarea className="form-control" name="description" rows="5" disabled
                                       defaultValue={this.props.description} />
                         </label>
                     </div>

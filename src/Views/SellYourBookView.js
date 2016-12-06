@@ -25,7 +25,7 @@ export default class SellYourBookView extends Component {
                     <div className="form-group">
                         <label>
                             <div>Description</div>
-                            <textarea className="form-control" name="description" rows="10"
+                            <textarea className="form-control" name="description" rows="5"
                                       ref={e => this.descriptionField = e}/>
                         </label>
                     </div>
@@ -51,7 +51,7 @@ export default class SellYourBookView extends Component {
                         </label>
                     </div>
                     <div>
-                        <input className="btn btn-default" type="submit" value="Sell" />
+                        <input className="btn btn-info" type="submit" value="Sell" />
                     </div>
                 </form>
             </div>

@@ -120,12 +120,17 @@ export default class App extends Component {
       KinveyRequests.findAllBooks()
           .then(loadBooksForSaleSuccess.bind(this));
       function loadBooksForSaleSuccess(books) {
-          if(this.books.price === null) {
+          books = books.filter(b => b.price)
+          //for(let book of books)
+          if(books) {
               this.showInfo("Books For Sale loaded.");
               this.showView(
                   <BooksForSaleView
                       books={books}
                       userId={this.state.userId}
+                      editBookClicked={this.booksForEdit.bind(this)}
+                      deleteBookClicked={this.confirmBookDelete.bind(this)}
+                      detailsBookClicked={this.detailsBook.bind(this)}
 
                   />
               )

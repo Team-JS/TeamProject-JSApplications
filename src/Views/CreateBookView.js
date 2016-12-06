@@ -25,7 +25,7 @@ export default class CreateBookView extends Component {
                     <div className="form-group">
                         <label>
                             <div>Description</div>
-                            <textarea className="form-control" name="description" rows="10" cols="10"
+                            <textarea className="form-control" name="description" rows="10"
                                       ref={e => this.descriptionField = e}/>
                         </label>
                     </div>

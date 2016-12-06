@@ -15,6 +15,10 @@ export default class HomeView extends Component{
                 }
                 <p>This is the Prodacvachnica and book-listings home.
                 For any questions and concerns please login or register.</p>
+                <div className="img-responsive">
+                    <img href="../images/bookPic.jpg" alt=""/>
+                </div>
+
             </div>
         );
     }

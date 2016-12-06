@@ -20,12 +20,12 @@ export default class BooksView extends Component {
             <div className="panel panel-default">
                 <div className="panel-heading">Books</div>
                 <div className="table-responsive">
-                    <table className="table">
+                    <table className="table table-bordered">
                         <thead>
                         <tr>
-                            <th>Title</th>
+                            <th className="col-lg-3 col-sm-2 col-xs-1">Title</th>
                             <th>Author</th>
-                            <th>Description</th>
+                            <th className="col-lg-3 col-sm-2 col-xs-1">Description</th>
                             <th>Date</th>
                             <th>Price</th>
                             <th>Actions</th>
